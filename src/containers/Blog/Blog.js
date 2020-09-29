@@ -26,9 +26,14 @@ class Blog extends Component {
             });
         });
     }
+    selectPostHandler = (id) => {
+        this.setState({
+            selectedPost:id
+        })
+    }
     render () {
         const posts = this.state.posts.map(post => {
-            return <Post key={post.id} title={post.title} author={post.author}></Post>
+            return <Post key={post.id} title={post.title} author={post.author} clicked={() => this.selectPostHandler(post.id)}></Post>
         })
         return (
             <div>
