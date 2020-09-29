@@ -8,7 +8,8 @@ import './Blog.css';
 
 class Blog extends Component {
     state = {
-        posts:[]
+        posts:[],
+        selectedPost:null
     }
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -35,7 +36,7 @@ class Blog extends Component {
                 {posts}
                 </section>
                 <section>
-                    <FullPost />
+                    <FullPost id={this.state.selectedPost} />
                 </section>
                 <section>
                     <NewPost />
