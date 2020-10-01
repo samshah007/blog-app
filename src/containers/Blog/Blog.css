@@ -5,16 +5,21 @@
     width: 80%;
     margin: auto;
 }
-.Posts ul{
+.Blog ul{
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
+    text-align: center;
 }
-.Posts ul li{
+.Blog ul li{
     display:inline-block;
     margin: 20px;
 }
-.Posts ul li a{
+.Blog ul li a{
     text-decoration: none;
     color: black;
+}
+.Blog ul li a:hover,.Blog ul li a:active{
+    color: coral;
 }
